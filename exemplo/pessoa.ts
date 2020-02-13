@@ -1,5 +1,5 @@
 namespace empresa{
-    class Pessoa{
+    export class Pessoa{
         //informações da classe
         private nome:string;
         private cpf:string;
@@ -15,7 +15,7 @@ namespace empresa{
         }
 
         //mostra o valor
-        getNome():string|undefined{
+        getNome():string{
             return this.nome;
         }
 

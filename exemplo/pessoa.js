@@ -1,28 +1,29 @@
+"use strict";
 var empresa;
 (function (empresa) {
-    var Pessoa = /** @class */ (function () {
-        function Pessoa(nome, cpf) {
+    class Pessoa {
+        constructor(nome, cpf) {
             this.cpf = cpf;
             this.nome = nome;
         }
-        Pessoa.prototype.getCpf = function () {
+        getCpf() {
             return this.cpf;
-        };
+        }
         //mostra o valor
-        Pessoa.prototype.getNome = function () {
+        getNome() {
             return this.nome;
-        };
+        }
         //altera o valor
-        Pessoa.prototype.setNome = function (nome) {
+        setNome(nome) {
             this.nome = nome;
-        };
-        Pessoa.prototype.getIdade = function () {
+        }
+        getIdade() {
             return this.idade;
-        };
+        }
         //altera o valor
-        Pessoa.prototype.setIdade = function (idade) {
+        setIdade(idade) {
             this.idade = idade;
-        };
-        return Pessoa;
-    }());
+        }
+    }
+    empresa.Pessoa = Pessoa;
 })(empresa || (empresa = {}));
