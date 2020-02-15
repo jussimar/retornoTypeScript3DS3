@@ -32,5 +32,7 @@ namespace empresa{
         setIdade(idade:number):void{
             this.idade = idade;
         }
+
+       
     }
 }

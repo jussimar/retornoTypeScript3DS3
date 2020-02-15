@@ -2,6 +2,10 @@
 var empresa;
 (function (empresa) {
     class Cliente extends empresa.Pessoa {
+        constructor(nome, cpf, cod) {
+            super(nome, cpf);
+            this.codCliente = cod;
+        }
         getSaldo() {
             return this.saldo;
         }
@@ -21,4 +25,5 @@ var empresa;
             this.codCliente = codCliente;
         }
     }
+    empresa.Cliente = Cliente;
 })(empresa || (empresa = {}));
