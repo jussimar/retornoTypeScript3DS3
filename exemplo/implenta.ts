@@ -27,11 +27,22 @@ namespace empresa{
     document.getElementById("nomeF").textContent = f.getNome();
     document.getElementById("cpfF").textContent = f.getCpf();
     document.getElementById("codF").textContent = f.getCodFuncionario().toString();
-    document.getElementById("idadeF").textContent = c.getIdade().toString();
+    document.getElementById("idadeF").textContent = f.getIdade().toString();
     document.getElementById("valorDiaF").textContent = "R$ "+f.getValorDia();
-    document.getElementById("salarioF").textContent = "R$ "+f.calcularSalario();
+    document.getElementById("salarioF").textContent = "R$ "+f.calcularSalario(300);
 
 
+    let g = new Gerente("Oswaldo","555.555.555-55");
+    g.setIdade(32);
+    g.setCodFuncionario(963);
+    g.setValorDia(100);
+    g.setSetor("T.I.");
 
-    
+    document.getElementById("nomeG").textContent = g.getNome();
+    document.getElementById("cpfG").textContent = g.getCpf();
+    document.getElementById("codG").textContent = g.getCodFuncionario().toString();
+    document.getElementById("idadeG").textContent = g.getIdade().toString();
+    document.getElementById("valorDiaG").textContent = "R$ "+g.getValorDia();
+    document.getElementById("salarioG").textContent = "R$ "+g.calcularSalario();
+    document.getElementById("setorG").textContent = g.getSetor();
 }

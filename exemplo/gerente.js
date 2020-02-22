@@ -3,7 +3,7 @@ var empresa;
 (function (empresa) {
     class Gerente extends empresa.Funcionario {
         getSetor() {
-            return this.getSetor();
+            return this.setor;
         }
         setSetor(setor) {
             this.setor = setor;
@@ -12,4 +12,5 @@ var empresa;
             return (this.getValorDia() * 30) + (this.getValorDia() * 0.3);
         }
     }
+    empresa.Gerente = Gerente;
 })(empresa || (empresa = {}));

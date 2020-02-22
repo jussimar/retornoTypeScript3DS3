@@ -1,9 +1,9 @@
 namespace empresa{
-    class Gerente extends Funcionario{
+    export class Gerente extends Funcionario{
         private setor: string;
 
         getSetor(): string{
-            return this.getSetor();
+            return this.setor;
         }
 
         setSetor(setor:string):void{

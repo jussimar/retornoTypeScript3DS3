@@ -15,7 +15,12 @@ var empresa;
             this.valorDia = valor;
         }
         calcularSalario(desconto) {
-            return this.valorDia * 30;
+            if (desconto == undefined) {
+                return (this.valorDia * 30);
+            }
+            else {
+                return (this.valorDia * 30) - desconto;
+            }
         }
     }
     empresa.Funcionario = Funcionario;

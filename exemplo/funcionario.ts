@@ -19,8 +19,15 @@ namespace empresa{
             this.valorDia = valor;
         }
 
-        calcularSalario(desconto?:String): number{
-            return this.valorDia * 30;
+                
+        calcularSalario(desconto?:number): number{
+
+            if(desconto == undefined){
+                return (this.valorDia * 30)
+            }else{
+                return (this.valorDia * 30)-desconto;
+            }
+            
         }
     }
 }
