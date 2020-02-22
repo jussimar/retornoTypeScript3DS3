@@ -13,5 +13,6 @@ namespace empresa{
         calcularSalario(): number{
             return (this.getValorDia() * 30) + (this.getValorDia()*0.3) ;
         }
+
     }
 }

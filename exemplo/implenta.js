@@ -16,4 +16,7 @@ var empresa;
     document.getElementById("idadeC").textContent = c.getIdade().toString();
     document.getElementById("limiteC").textContent = "R$ " + c.getLimite().toString();
     document.getElementById("saldoC").textContent = "R$ " + c.getSaldo().toString();
+    let f = new empresa.Funcionario("Welington Orelha", "120.120.120.00");
+    f.setValorDia(30);
+    document.getElementById("saldoC").textContent = "R$ " + f.calcularSalario(200);
 })(empresa || (empresa = {}));
