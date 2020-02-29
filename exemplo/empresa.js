@@ -37,4 +37,5 @@ var empresa;
             return this.funcionarios;
         }
     }
+    empresa.Empresa = Empresa;
 })(empresa || (empresa = {}));

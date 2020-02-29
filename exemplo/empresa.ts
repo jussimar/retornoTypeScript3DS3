@@ -1,5 +1,5 @@
 namespace empresa{
-    class Empresa{
+    export class Empresa{
         private nomeEmpresa:string;
         private atividade:string;
         private cidade:string;
@@ -45,8 +45,6 @@ namespace empresa{
         getFuncionario(){
             return this.funcionarios;
         }
-
-
 
     }
 }
