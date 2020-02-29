@@ -61,7 +61,11 @@ namespace empresa{
     let tbFuncionario = document.getElementById("tbFuncionario");
 
     e.getFuncionario().forEach(e => {
-        let html = "<tr><td>"+e.getNome()+"</td><td>"+e.getCodFuncionario()+"</td></tr>";
+        let nome = e.getNome();
+        if(e instanceof Gerente){
+            nome += " - Gerente";
+        }
+        let html = "<tr><td>"+nome+"</td><td>"+e.getCodFuncionario()+"</td></tr>";
         tbFuncionario.innerHTML += html;
     });
 

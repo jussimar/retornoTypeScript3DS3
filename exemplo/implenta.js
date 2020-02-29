@@ -50,7 +50,11 @@ var empresa;
     document.getElementById("cidadeE").textContent = e.getCidade();
     let tbFuncionario = document.getElementById("tbFuncionario");
     e.getFuncionario().forEach(e => {
-        let html = "<tr><td>" + e.getNome() + "</td><td>" + e.getCodFuncionario() + "</td></tr>";
+        let nome = e.getNome();
+        if (e instanceof empresa.Gerente) {
+            nome += " - Gerente";
+        }
+        let html = "<tr><td>" + nome + "</td><td>" + e.getCodFuncionario() + "</td></tr>";
         tbFuncionario.innerHTML += html;
     });
 })(empresa || (empresa = {}));
